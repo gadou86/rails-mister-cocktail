@@ -1,20 +1,32 @@
+<div class="container p-3 text-center">
+
 <h2><%= @cocktail.name %></h2>
 
 <br>
+<hr>
+<table class="table table-bordered">
+        <tbody>
+          <thead>
+            <th>Ingredient</th>
+            <th>Description</th>
+            <th>Action</th>
+          </thead>
+          <% @cocktail.doses.each do |dose| %>
+            <tr>
+              <td><%= dose.ingredient.name %></td>
+              <td><%= dose.description %></td>
+              <td>
+                <%= link_to cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <i class="fa fa-trash destroy_dose"></i>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= link_to 'Go Back',cocktails_path(@cocktails)  %> 
+      <hr>
+      <%= link_to 'Create Doses', new_cocktail_dose_path(@cocktail)%>
 
 
-
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-  <li> <%= dose.description %> | <%= dose.ingredient.name %> </li>
-  <%= link_to %>
-  <% end %>
-
-</ul>
-
-
-<%= link_to 'go back',cocktails_path(@cocktails)  %>
-
-<%= link_to 'Create Doses', new_cocktail_dose_path(@cocktail)%>
-
-
+</div>

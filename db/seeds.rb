@@ -12,6 +12,7 @@ Ingredient.create(name: "mohito")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 
+
 puts 'Ingredient has been created now will create the cocktails'
 
 
