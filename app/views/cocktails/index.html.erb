@@ -2,6 +2,8 @@
 
 <div class="container ">
 <p id="notice" style="color: green" text-cener><%= notice %></p>
+
+<%# <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %> %>
 <div class="text-center p-3">
 <h1 class="text-center p-3">List of Cocktails</h1>
 <h3 class="btn btn-success align-center"><%= link_to 'Create cocktail', new_cocktail_path  %></h3> 
@@ -19,7 +21,7 @@
                 <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
                   <i class="fa fa-trash destroy_cocktail"></i>
                 <% end %>
-                <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+    
             <%# <a href="#" class="btn btn-primary">Ingredients</a> %>
           </div>
         </div>
