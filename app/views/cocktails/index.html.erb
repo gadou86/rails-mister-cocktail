@@ -19,6 +19,7 @@
                 <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
                   <i class="fa fa-trash destroy_cocktail"></i>
                 <% end %>
+                <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
             <%# <a href="#" class="btn btn-primary">Ingredients</a> %>
           </div>
         </div>
