@@ -4,6 +4,10 @@
 
 <br>
 <hr>
+
+<% photo_cocktail = @cocktail.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 <table class="table table-bordered">
         <tbody>
           <thead>
