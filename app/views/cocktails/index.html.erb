@@ -1,39 +1,31 @@
-
-
+  <p id="notice" style="color: green" text-cener><%= notice %></p>
 <div class="container ">
-<p id="notice" style="color: green" text-cener><%= notice %></p>
 
-<div class="text-center p-3">
-<h1 class="text-center p-3">List of Cocktails</h1>
-<h3 class="btn btn-success align-center"><%= link_to 'Create cocktail', new_cocktail_path  %></h3> 
-</div>
+  <div class="text-center p-3">
+    <h1 class="text-center p-3">List of Cocktails</h1>
+    <h3 class="btn btn-success align-center"><%= link_to 'Create cocktail', new_cocktail_path  %></h3>
+  </div>
+
 
 
   <div class="row">
-    <%  @cocktails.each do |cocktail| %>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card" style="width: 300px" >
-
-
-            <img class="card-img-top" src="https://picsum.photos/200" alt="Card image cap">
-              <div class="card-body">
-              <h5 class="card-title"> <%= cocktail.name %> </h5>
-              <p class="card-text"> <%= link_to cocktail.name, cocktail_path(cocktail)  %></p>
-
-                <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
-                  <i class="fa fa-trash destroy_cocktail"></i>
-                <% end %>
-    
-            <%# <a href="#" class="btn btn-primary">Ingredients</a> %>
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card-trip">
+        <img src="https://picsum.photos/200" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= cocktail.name %></h2>
+            <p><%= link_to cocktail.name, cocktail_path(cocktail)  %></p>
           </div>
+          <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
+          <i class="fa fa-trash destroy_cocktail"></i>
+          <% end %>
+          <%# <h2 class="card-trip-pricing">£99.99</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
         </div>
       </div>
+    </div>
     <% end %>
   </div>
-
 </div>
-
-
-
-
-
