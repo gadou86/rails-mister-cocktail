@@ -1,0 +1,26 @@
+.header {
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  box-shadow: 0px 3px 30px rgb(232, 225, 184);
+  width: 600px;
+  margin: auto;
+}
+
+.header h3{
+  // background-color: rgb(255, 255, 255);
+  color: black;
+  font-weight: bold;
+}
+
+.btn {
+  background-color:rgba(249, 244, 103, 0.756);
+  border-radius: 4px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+}
+
+.btn:hover {
+  background-color:rgba(172, 168, 71, 0.756);
+  text-decoration: none;
+}

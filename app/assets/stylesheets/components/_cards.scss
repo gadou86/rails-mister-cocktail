@@ -60,14 +60,16 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 20px;
-  border-radius: 20px;
+  border-radius: 20px 20px 3px 3px ;
 }
 
 .card-trip > img {
+  padding: 2px;
   height: 200px;
   width: 100%;
   object-fit: cover;
-}
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(to bottom, rgba(237, 122, 233, 0.646) 0%,rgba(235, 212, 33, 0.65) 100%);}
 
 .card-trip h2 {
   font-size: 16px;
