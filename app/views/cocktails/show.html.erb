@@ -5,9 +5,10 @@
 <br>
 <hr>
 
-<% photo_cocktail = @cocktail.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, crop: :fill %>')">
+  <%= @cocktail.name %>
+<%# <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+</div>
 <table class="table table-bordered">
         <tbody>
           <thead>

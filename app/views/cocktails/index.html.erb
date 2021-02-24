@@ -8,10 +8,13 @@
 <h3 class="btn btn-success align-center"><%= link_to 'Create cocktail', new_cocktail_path  %></h3> 
 </div>
 
+
   <div class="row">
     <%  @cocktails.each do |cocktail| %>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card" style="width: 300px" >
+
+
             <img class="card-img-top" src="https://picsum.photos/200" alt="Card image cap">
               <div class="card-body">
               <h5 class="card-title"> <%= cocktail.name %> </h5>
