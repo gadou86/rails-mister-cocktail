@@ -1,14 +1,16 @@
 .container {
-  background-color: #ffd484fc;
+  background-color: #1c1c1c;
   height: auto;
   margin: 0 auto;
-  border-radius: 500px 500px 50px 50px ;
-  // padding: 50px 10px;
+  border-radius: 20px;
+  padding: 50px 10px;
   padding-top: 10px;
+  border: .2px solid rgb(210, 100, 247);
+  box-shadow: 3px 3px 20px rgba(210, 35, 245, 0.393);
   
 }
 
-
 body {
-  background-color: rgb(22, 21, 26);
+  background-color: #242424;
 }
+
