@@ -1,13 +1,13 @@
   <p id="notice" style="color: green" text-cener><%= notice %></p>
-  <div class="container ">
-
     <div class="header">
       <div class="text-center p-3">
         <h1 class="text-center p-3">List of Cocktails</h1>
         <h3 class="btn btn-primary align-center"><%= link_to 'Create cocktail', new_cocktail_path  %></h3>
       </div>
     </div>
-
+  <div class="container ">
+    <div class="container1">
+    
 
 
     <div class="row">
@@ -23,11 +23,15 @@
             <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
             <i class="fa fa-trash destroy_cocktail"></i>
             <% end %>
-            <%# <h2 class="card-trip-pricing">£99.99</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
           </div>
         </div>
       </div>
       <% end %>
     </div>
+
+    </div>
+
+
+
+
   </div>
