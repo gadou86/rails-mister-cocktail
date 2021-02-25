@@ -1,26 +1,27 @@
 .container {
   background-color: #1c1c1c;
-  height: 700px;
+  height: 450;
   margin: 0 auto;
   border-radius: 20px;
   padding: 50px 10px;
   padding-top: 10px;
   border: 0 solid #ff3796;
   box-shadow: 5px 5px 70px #ff3796;
+  
  
   
 }
 
 .container1 {
   background-color: #1c1c1c;
-  height: 400px;
+  height: 450px;
   margin: 0px auto;
-  border-radius: 20px 20px 700px 700px ;
+  border-radius: 20px ;
   padding: 50px 10px;
   padding-top: 10px;
   border: 0px solid #00faac;
-  box-shadow: 0px 0px 50px #ffffff;
-  
+  box-shadow: 0px 3px 10px #ffffff;
+  overflow-y: auto;
 }
 
 body {
