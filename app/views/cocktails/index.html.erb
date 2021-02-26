@@ -1,42 +1,42 @@
   <p id="notice" style="color: green" text-cener><%= notice %></p>
-    <div class="header">
-      <div class="text-center p-3">
-        <h1 class="text-center p-3">List of Cocktails</h1>
+  <div class="header">
+    <div class="text-center p-3">
+      <h1 class="text-center p-3">List of Cocktails</h1>
 
-      </div>
     </div>
+  </div>
   <div class="container ">
-    <div class="container1 ">
+    <%# <div class="container1 "> %>
 
 
-    <div class="row">
-      <% @cocktails.each do |cocktail| %>
+      <div class="row">
+        <% @cocktails.each do |cocktail| %>
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card-trip">
-          <%# <img src="https://picsum.photos/200" /> %>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card-trip">
+            <%# <img src="https://picsum.photos/200" /> %>
             <% if cocktail.photo.attached? %>
-    <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-  <% else %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)))">
-      <%= @cocktail.name %>
-    </div>
-  <% end %>
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= cocktail.name %></h2>
-              <p><%= link_to cocktail.name, cocktail_path(cocktail)  %></p>
+            <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+            <% else %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)))">
+              <%= @cocktail.name %>
             </div>
-            <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
-            <i class="fa fa-trash destroy_cocktail"></i>
             <% end %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= cocktail.name %></h2>
+                <p><%= link_to cocktail.name, cocktail_path(cocktail)  %></p>
+              </div>
+              <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="fa fa-trash destroy_cocktail"></i>
+              <% end %>
+            </div>
           </div>
         </div>
+        <% end %>
       </div>
-      <% end %>
-    </div>
 
-    </div>
+    <%# </div> %>
 
 
 
