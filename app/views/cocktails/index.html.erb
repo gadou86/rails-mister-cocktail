@@ -2,19 +2,26 @@
     <div class="header">
       <div class="text-center p-3">
         <h1 class="text-center p-3">List of Cocktails</h1>
-        <h3 class="btn btn-primary align-center"><%= link_to 'Create cocktail', new_cocktail_path  %></h3>
+
       </div>
     </div>
   <div class="container ">
     <div class="container1 ">
-    
 
 
     <div class="row">
       <% @cocktails.each do |cocktail| %>
+
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card-trip">
-          <img src="https://picsum.photos/200" />
+          <%# <img src="https://picsum.photos/200" /> %>
+            <% if cocktail.photo.attached? %>
+    <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+  <% else %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)))">
+      <%= @cocktail.name %>
+    </div>
+  <% end %>
           <div class="card-trip-infos">
             <div>
               <h2><%= cocktail.name %></h2>

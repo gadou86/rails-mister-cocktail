@@ -5,10 +5,16 @@
 <br>
 <hr>
 
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, crop: :fill %>')">
-  <%= @cocktail.name %>
-<%# <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-</div>
+
+  
+  <% if @cocktail.photo.attached? %>
+    <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+  <% else %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)))">
+      <%= @cocktail.name %>
+    </div>
+  <% end %>
+
 <table class="table table-bordered">
         <tbody>
           <thead>
@@ -35,3 +41,5 @@
 
 
 </div>
+
+
