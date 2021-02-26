@@ -1,10 +1,11 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
-   
 
-    <img src="https://images.vexels.com/media/users/3/144120/isolated/preview/4eff3df3a5d6f917f98ba7917ee40011-neon-cocktails-sign-by-vexels.png"/>
-</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <%= link_to root_path, class: "navbar-brand" do %>
+  <%= image_tag "https://images.vexels.com/media/users/3/144120/isolated/preview/4eff3df3a5d6f917f98ba7917ee40011-neon-cocktails-sign-by-vexels.png" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <%# <span class="navbar-toggler-icon"></span> %>
   </button>
 
@@ -18,10 +19,10 @@
         <a class="nav-link" href="#">Messages</a>
       </li>
       <li class="nav-item dropdown"> %>
-              <h3 class="btn btn-primary align-center"><%= link_to 'Create cocktail', new_cocktail_path  %></h3>
+      <h3 class="btn btn-primary align-center"><%= link_to 'Create cocktail', new_cocktail_path  %></h3>
 
-        <%# <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" /> %>
-        <%# <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <%# <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" /> %>
+      <%# <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
         </div> %>
@@ -29,4 +30,3 @@
     </ul>
   </div>
 </div>
-
